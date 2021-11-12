@@ -1,0 +1,261 @@
+img {
+    max-height: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* roboto-regular - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+    url('../fonts/roboto-v29-latin-regular.woff2') format('woff2') /* Super Modern Browsers */
+
+}
+
+/* roboto-500 - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+    url('../fonts/roboto-v29-latin-500.woff2') format('woff2') /* Super Modern Browsers */
+}
+
+/* roboto-700 - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+    url('../fonts/roboto-v29-latin-700.woff2') format('woff2') /* Super Modern Browsers */
+}
+
+
+body {
+    font-family: Roboto sans-serif;
+    color: #0F001A;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.header {
+    min-height: 100vh;
+    padding: 0 20px 75px 20px;
+    background: linear-gradient(to bottom, rgba(74, 153, 211, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    box-shadow: 0 4px 16px rgba(75, 0, 129, 0.26);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 45px 0 150px 0;
+}
+
+.nav__logo {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 42px;
+    color: #4A99D3;
+}
+
+.nav__list {
+    display: flex;
+    gap: 50px;
+}
+
+.nav__link {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+
+}
+
+.nav__link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.nav__link--active {
+    font-weight: 500;
+    color: #4A99D3;
+}
+
+
+.header__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 70px;
+    letter-spacing: 0.02em;
+    color: #260041;
+}
+
+
+.header__text {
+    font-size: 20px;
+    line-height: 36px;
+    color: #260041;
+}
+
+.header__content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.header__title {
+    margin-bottom: 20px;
+}
+
+.header__text {
+    margin-bottom: 60px;
+}
+
+.header__button {
+    width: 180px;
+    height: 60px;
+    border: none;
+}
+
+.header__button--google {
+    background-image: url("../img/google_play_btn.png");
+}
+
+.header__button--appstore {
+    background-image: url("../img/app_store_btn.png");
+}
+
+.what {
+    position: relative;
+    padding: 150px 20px;
+}
+
+.what::before {
+    content: url("../img/what-before.png");
+    height: 190px;
+    width: 190px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.what::after {
+    content: url("../img/what-after.png");
+    height: 190px;
+    width: 190px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+.what__header {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: 0.05em;
+    color: #260041;
+}
+
+
+.what__text {
+    font-size: 16px;
+    line-height: 26px;
+    color: #0F001A;
+    opacity: 0.6;
+    margin-bottom: 50px;
+}
+
+.what__list {
+    align-items: center;
+    margin-top: -138px;
+    display: grid;
+    gap: 100px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.what__item {
+    width: 380px;
+    padding: 48px;
+    background: #FFFFFF;
+    box-shadow: 5px 20px 50px rgba(74, 153, 211, 0.2);
+    border-radius: 10px;
+    position: relative;
+}
+
+.what__item:first-child {
+    position: relative;
+    top: 50%;
+}
+
+.what__item:last-child {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.what__item::before {
+    content: url("../img/what-item-before.png");
+    position: absolute;
+    z-index: -10;
+}
+
+.what__item:nth-child(2)::before {
+    top: -72px;
+    right: -72px;
+}
+
+.what__item:first-child::before {
+    left: -72px;
+    top: 30%;
+}
+
+
+.what__item:last-child::before {
+    bottom: -72px;
+    right: -72px;
+}
+
+.what__item-header {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+}
+
+.what__img--upper {
+    position: relative;
+    top: -68px;
+}
+
+
+.what__link {
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 30px;
+    color: #4A99D3;
+    position: relative;
+}
+
+.what__link:hover {
+    text-decoration: underline;
+}
+
+.what__link::after {
+    content: url("../img/link_arrow.svg");
+    padding-left: 30px;
+    position: absolute;
+    top: -5px;
+}
